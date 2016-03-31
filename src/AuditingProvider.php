@@ -1,6 +1,6 @@
 <?php
 
-namespace tuanlq11;
+namespace tuanlq11\auditing;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;

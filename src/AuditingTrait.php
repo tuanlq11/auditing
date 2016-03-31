@@ -1,5 +1,5 @@
 <?php
-namespace tuanlq11;
+namespace tuanlq11\auditing;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
