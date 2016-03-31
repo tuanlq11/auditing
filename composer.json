@@ -1,0 +1,22 @@
+{
+  "name": "tuanlq11/auditing",
+  "description": "Helper Auditing User Activities",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Mr.Tuan",
+      "email": "tuanlq.it@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "laravel/framework": "5.1.*",
+    "doctrine/dbal": "~2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "tuanlq11\\auditing\\": "src/"
+    }
+  }
+}
