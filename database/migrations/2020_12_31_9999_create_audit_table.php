@@ -13,6 +13,7 @@ class CreateAuditTable extends Migration
             $table->integer('user_id')->nullable();
             $table->text('new_value')->nullable();
             $table->text('old_value')->nullable();
+            $table->string('action');
 
             $table->primary('id');
             $table->timestamps();
