@@ -3,9 +3,9 @@ namespace tuanlq11\auditing;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use tuanlq11\Audit;
+use tuanlq11\auditing\Audit;
 
-class AuditingTrait extends Model
+trait AuditingTrait
 {
     /**
      * Turn on|off trait
