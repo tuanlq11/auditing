@@ -66,6 +66,10 @@ trait AuditingTrait
             $obj->auditing($obj->updatedData, $obj->originalData, 'updated');
         });
 
+        self::deleting(function ($obj) {
+            $obj->prepareAuditing();
+        });
+
         self::deleted(function ($obj) {
             if (!$obj->auditingEnabled) return;
             $obj->auditing($obj->updatedData, $obj->originalData, 'deleted');
@@ -77,7 +81,7 @@ trait AuditingTrait
         if (!$this->auditingEnabled) return;
 
         $this->originalData = $this->original;
-        $this->updatedData = $this->attributes;
+        $this->updatedData  = $this->attributes;
 
         foreach ($this->updatedData as $key => $val) {
             if (is_object($val) && !method_exists($val, '__toString')) {
@@ -141,7 +145,7 @@ trait AuditingTrait
     }
 
     /**
-     * @param int    $limit
+     * @param int $limit
      * @param string $order
      */
     public static function staticLogHistory($limit = 100, $order = 'desc')
@@ -150,7 +154,7 @@ trait AuditingTrait
     }
 
     /**
-     * @param int    $limit
+     * @param int $limit
      * @param string $order
      *
      * @return mixed
