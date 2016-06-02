@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Audit extends Model
 {
-    protected $table = 'audit';
+    protected $table = 'audits';
+    
     protected $fillable = [
         'id',
         'model',

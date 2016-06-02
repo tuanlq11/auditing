@@ -7,7 +7,7 @@ class CreateAuditTable extends Migration
 {
     public function up()
     {
-        Schema::create('audit', function (Blueprint $table) {
+        Schema::create('audits', function (Blueprint $table) {
             $table->char('id', 32);
             $table->string('model', 255);
             $table->string('model_id', 255);
