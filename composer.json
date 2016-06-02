@@ -5,10 +5,10 @@
   "minimum-stability": "stable",
   "authors": [
     {
-      "name": "Mr.Tuan",
-      "email": "tuanlq.it@gmail.com"
+      "name": "Fallen"
     }
   ],
+  "version": "0.2.0",
   "require": {
     "php": ">=5.5.9",
     "laravel/framework": ">=5.2.0",

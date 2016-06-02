@@ -5,9 +5,11 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateAuditTable extends Migration
 {
+    protected $table_name = 'audits';
+
     public function up()
     {
-        Schema::create('audits', function (Blueprint $table) {
+        Schema::create($this->table_name, function (Blueprint $table) {
             $table->char('id', 32);
             $table->string('model', 255);
             $table->string('model_id', 255);
@@ -23,6 +25,6 @@ class CreateAuditTable extends Migration
 
     public function down()
     {
-        Schema::drop('audit');
+        Schema::drop($this->table_name);
     }
 }
